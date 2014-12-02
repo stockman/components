@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<!-- search input box-->
+		<i class="fa fa-search"></i>
+		<div class= "outer_search">
+			<form method="get" action="http://www.google.com/search" target="_blank" class="search_form">
+				<input title="Enter the terms you wish to search for." type="text" size="15" maxlength="255" name="q" value=""  id="input_box" class="textarea"/>
+				<i class="fa fa-times-circle-o"></i>
+				<input type="submit" id="edit-submit" value="Search" class="form-submit"/>
+				<input type="hidden" name="sitesearch" value="bikecalgary.org"/>
+				</form>
+			</div>
+		<!-- std  input box -->
+		<div class="">
+			<input type="text" class="bike-shop-filter" data-table="views-table" placeholder="Filter">
+			<i class="fa fa-times-circle-o bike-shop-reset"></i>
+		</div>
+	</body>
+	<!--sass -->
+	<style>
+	.bike-shop-filter {
+	  border-radius: $radius;
+	  line-height: 2rem;
+	  margin: 0.2rem 0;
+	  padding: 0 1%;
+	}
+	.bike-shop-reset {
+	  vertical-align: sub;
+	}
+	</style>
+	<script>
+	// generic reset button for input box
+    var resetter = $('.fa-times-circle-o')
+         resetter.click(function() {
+           $(this).parent().find('input[type=text]').val("");
+    });
+	</script>
+</html>
